@@ -1,0 +1,83 @@
+.icons-container {
+    color: white;
+    position: relative;
+
+    height: 100%;   
+    width: 100%;
+    background-color: #111;
+
+    .row {  
+        z-index: -100;      
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;   
+        fa-icon {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 4em;
+            transition: 1s;
+            margin: 5px;
+        }
+    
+        fa-icon:hover {
+            transition: 0s;
+            color: #0f0;
+        }
+    }
+
+}
+.presentation-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto auto;
+
+    height: fit-content;
+    width: fit-content;
+
+    // background-color: gray;
+    text-align: center;
+    color: white;
+
+    h1 { font-size: 4em; }
+    h2 { 
+        font-size: 2.5em; 
+        margin-top: -0.5em;
+    }
+    h3 {
+        margin-top: -1em;
+    }
+}
+
+// Tablet
+@media screen and (min-width: 40em) {
+    .presentation-container {
+        h1 { font-size: 4em; }
+        h2 { 
+            font-size: 2.5em; 
+            margin-top: -0.5em;
+        }
+        h3 {
+            margin-top: -1em;
+        }
+        
+    }
+}
+
+// desktop
+@media screen and (min-width: 55em) {
+    .presentation-container {
+        margin: 20vh auto auto 100px;
+
+        h1 { font-size: 6em; }
+        h2 { 
+            font-size: 4.5em; 
+            margin-top: -0.5em;
+        }
+        h3 {
+            margin-top: -2em;
+        }
+        
+    }
+}
