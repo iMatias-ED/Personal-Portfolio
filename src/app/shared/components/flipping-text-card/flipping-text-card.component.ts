@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FlippingTextCardContent } from '../../interfaces/flipping-text-card-content';
 
 @Component({
-  selector: 'app-flipping-text-card',
+  selector: 'flipping-text-card',
   templateUrl: './flipping-text-card.component.html',
   styleUrls: ['./flipping-text-card.component.scss']
 })
-export class FlippingTextCardComponent implements OnInit {
+export class FlippingTextCardComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() content!: FlippingTextCardContent;
 
 }

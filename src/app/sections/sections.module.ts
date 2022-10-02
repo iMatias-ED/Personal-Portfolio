@@ -5,6 +5,8 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
+import { SharedModule } from '../shared/shared.module';
+
 // components
 import { FontawesomeAnimatedBackgroundComponent } from './components/fontawesome-animated-background/fontawesome-animated-background.component';
 import { ToolsSectionComponent } from './components/tools-section/tools-section.component';
@@ -20,7 +22,8 @@ import { ContactSectionComponent } from './components/contact-section/contact-se
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ],
   exports: [
     FontawesomeAnimatedBackgroundComponent,

@@ -4,14 +4,17 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum ducimus pariatur et ipsa molestiae, reiciendis, quisquam libero exercitationem ab labore eligendi consequuntur atque obcaecati voluptatum distinctio optio perferendis nostrum itaque.</p>
         <!-- Diferenciar por colores las tecnologias en las cuales tengo experiencia profesional
         y en las cuales tengo experiencia por cursos y proyectos personales. -->
-        <ul>
+        <!-- <ul>
             <li id="pro">Professional Experience</li>
             <li id="courses">Courses and Projects Experience</li>
-        </ul>
+        </ul> -->
     </div>
 
     <div class="tools-container">
-        <span *ngFor="let tool of toolsList"> {{ tool }} </span>
+        <flipping-text-card 
+            *ngFor="let tool of toolsList"
+            [content]="tool"
+        ></flipping-text-card>
     </div>
     <span id="watermark">
         Experience

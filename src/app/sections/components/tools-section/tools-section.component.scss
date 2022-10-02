@@ -22,43 +22,18 @@
         p {
             font-size: 1.2em;
         }
-
-        ul {
-            margin-top: -0.3em;
-            font-size: 1.2em;
-            font-weight: 500;
-            list-style: square;
-
-            #pro {
-                color: #07D6F1 
-            }
-            #courses {
-                color:#12E085;
-            }
-        }
-
     }
 
     .tools-container {
         display: grid;
-        grid-gap: 8px;
+        grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
 
-        span {
+        span, flipping-text-card {
             justify-self: center;
 
             width: 90%;
             max-width: 200px;
-
-            padding: 10px;
-            border-radius: 5px;
-            // background-color: #197875;
-            background-color: #3B737A;
-
-            color: white;
-            font-size: 1em;
-            text-align: center;
-            font-family: 'Bell MT';
         }
     }
 

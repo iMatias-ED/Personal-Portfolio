@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FlippingTextCardContent } from 'src/app/shared/interfaces/flipping-text-card-content';
 
 @Component({
   selector: 'tools-section',
@@ -7,22 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolsSectionComponent implements OnInit {
 
-  toolsList: string[] = [
-    "Angular",
-    "Wordpress",
-    "Visual Studio Code",
-    "Git",
-    "GitHub",
-    "PrimeNg",
-    "JavaScript",
-    "TypeScript",
-    "HTML",
-    "CSS",
-    "SASS",
-    "Python",
-    "PySide6",
-    "Django",
-    "SQL",
+  exampleTool: FlippingTextCardContent = 
+    { frontText: "HTML", backText: "Professional" }
+  
+
+  toolsList: FlippingTextCardContent[] = [
+    { frontText: "Angular",   backText: "Professional" },
+    { frontText: "Wordpress", backText: "Professional" },
+    { frontText: "TypeScript", backText: "Professional" },
+    { frontText: "Python", backText: "Advanced" },
+    { frontText: "Git", backText: "Professional" },
+    { frontText: "CSS/SASS", backText: "Professional" },
+    { frontText: "SQL", backText: "Medium" },
+    { frontText: "Django", backText: "Medium" },
   ]
 
   constructor() { }

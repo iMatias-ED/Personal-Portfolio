@@ -4,7 +4,7 @@
 
     .project-info {
         display: grid;
-        grid-gap: 10px;
+        grid-gap: 30px;
                 
         .project-description, .project-image {
             transition: .7s ease-in-out all;
@@ -19,7 +19,7 @@
             transform: translateX(-150px);
         }
         opacity: 0;        
-        transition: 1s ease-in-out all;
+        transition: 1.3s ease-in-out all;
 
         &.visible {
             opacity: 1;
@@ -32,6 +32,8 @@
 
 @media screen and (min-width: 40em) {
     .projects-container {
+        grid-gap: 20px;
+
         .project-info {
             opacity: 1;
             grid-template-columns: 1fr 1fr;

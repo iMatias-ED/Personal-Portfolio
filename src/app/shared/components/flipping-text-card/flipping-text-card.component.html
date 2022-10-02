@@ -1,1 +1,12 @@
-<p>flipping-text-card works!</p>
+<div class="card">
+    <div class="front face"> 
+        {{ content.frontText }} </div>
+    <div class="back face"> 
+        <span class="title"> Experience Level </span>
+        <span class="content"
+            [style.color]="content.backText==='Medium'? '#AD1F68': '#12E085'"
+        > 
+            {{ content.backText }} 
+        </span>
+    </div>
+</div>

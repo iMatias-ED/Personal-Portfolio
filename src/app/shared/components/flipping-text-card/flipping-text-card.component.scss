@@ -1,0 +1,62 @@
+.card {
+    padding: 40px 0px;
+    border-radius: 5px;
+    border: 1px solid #07D6F1;
+    
+    font-size: 1.3em;
+    font-family: 'Bell MT';
+    
+    transform-style: preserve-3d;
+    perspective: 600px;    
+    transition: 0.5s;
+
+    box-shadow:
+        0 0 3px 1.5px #fff,  /* inner white */
+        0 0 5px 3px #0ff; /* middle magenta */
+    
+    .face {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // Position
+        &.front, &.back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            backface-visibility: hidden;
+            transition: 0.5s;
+        }
+
+        // Styles 
+        &.back {
+            .title { 
+                margin-bottom: 3px;
+                font-size: 0.88em; 
+                color: #3B737A;
+            }
+        }
+
+        // Animation
+        &.front { transform: rotateX(0deg); }
+        &.back { transform: rotateX(180deg); }
+
+    }
+}
+
+.card:hover .front {
+    transform: rotateX(-180deg);
+}
+.card:hover .back {
+    transform: rotateX(0deg);
+}
+
+@media screen and (min-widt: 40em) {
+    .card {
+        max-width: 20vw;
+    }
+}

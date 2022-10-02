@@ -8,15 +8,16 @@ import { FlippingTextCardComponent } from './components/flipping-text-card/flipp
 
 @NgModule({
   declarations: [
+    FlippingTextCardComponent,
     FooterComponent,
-    FlippingTextCardComponent
   ],
   imports: [
     CommonModule,
     FontAwesomeModule
   ],
   exports: [
-    FooterComponent
+    FlippingTextCardComponent,
+    FooterComponent,
   ]
 })
 export class SharedModule {
