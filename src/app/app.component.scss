@@ -4,9 +4,7 @@
 // #E44B4D
 // #AD1F68
 
-body {
-    padding-bottom: 50px;
-}
+.content { padding: 20px 20px }
 
 .first-section-background {
     height: 100vh;
@@ -20,19 +18,15 @@ body {
     color: #12E085
 }
 
-.content {
-    padding: 20px 20px
-}
-@media screen and (min-width: 40em) {
-    .content { padding: 20px 50px }
-}
-@media screen and (min-width: 55em) {
-    .content { padding: 20px 100px }
-}
-
-// .tools-section {
-//     border-top: 7px solid #1d1d1d;
-// }
+// Sections
 .projects-section {
     background-color: #1d1d1d;
+}
+
+// Responsive
+@media screen and (min-width: 40em) {
+    .content { padding: 10px 50px 30px 50px }
+}
+@media screen and (min-width: 55em) {
+    .content { padding: 10px 100px 50px 100px }
 }

@@ -1,0 +1,38 @@
+.footer-container {
+    margin: 0;
+    width: 100vw;
+    padding: 20px 0px 40px 0px;
+    background-color: #3B737A;
+
+    display: grid;
+    justify-content: center;
+
+    .icons-container {
+        display: flex;
+        justify-content: center;
+
+        font-size: 3em;
+
+        fa-icon {
+            margin: 0px 5px
+        }
+    }
+
+    .copyright {
+        margin-top: 10px;
+        text-align: center;
+        h2 { 
+            margin-top: 5px; 
+            margin-bottom: 5px; 
+        }
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .footer-container {
+        padding: 40px 0px;
+        grid-template-columns: 1fr 1fr;
+
+        .copyright { margin-top: 0; }
+    }
+}

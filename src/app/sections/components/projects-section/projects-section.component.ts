@@ -14,7 +14,7 @@ export class ProjectsSectionComponent implements OnInit {
   ngOnInit(): void {
     this.objects = document.getElementsByClassName("project-info")
     this.observer = new IntersectionObserver( this.animaObjeto, { 
-      root: null, rootMargin: "200px 0px 120px 0px", threshold: 1.0 } )
+      root: null, rootMargin: "1000px 0px 150px 0px", threshold: 1.0 } )
 
     for ( let index of this.range( this.objects.length ) )
       this.observer.observe( this.objects.item(index)! )
