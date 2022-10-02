@@ -1,3 +1,9 @@
+// #07D6F1
+// #3B737A
+// #12E085
+// #E44B4D
+// #AD1F68
+
 body {
     padding-bottom: 50px;
 }
@@ -10,6 +16,8 @@ body {
 
 .section-title { 
     text-align: center;
+    font-size: 3.5em;
+    color: #12E085
 }
 
 .content {
@@ -22,80 +30,9 @@ body {
     .content { padding: 20px 100px }
 }
 
-
-// Tools Section
-.tools-section {
-    display: grid;
-
-    .text-container {
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-    .tools-container {
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 1fr 1fr;
-        span {
-            padding: 7px;
-            color: white;
-            border-radius: 5px;
-            background-color: green;
-        }
-    }
-
+// .tools-section {
+//     border-top: 7px solid #1d1d1d;
+// }
+.projects-section {
+    background-color: #1d1d1d;
 }
-@media screen and (min-width: 40em) {
-    .tools-section {  
-        grid-gap: 20px;  
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-// Projets
-.projects-container {
-    display: grid;
-    grid-gap: 10px;
-
-    .row {
-        display: grid;
-        grid-gap: 10px;;
-
-        .project-description {
-            text-align: center;
-        }
-        .project-image {
-            display: none;
-        }
-    }
-}
-
-@media screen and (min-width: 40em) {
-    .projects-container {
-        .row {
-            grid-template-columns: 1fr 1fr;
-
-            .project-image {
-                display: block;
-                background-color: aquamarine;
-            }
-        }
-    }
-}
-
-// contact
-.contact-section-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-
-    button {
-        max-width: 100px;
-    }
-}
-
