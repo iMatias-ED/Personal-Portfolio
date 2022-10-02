@@ -13,7 +13,7 @@
         justify-content: space-between;   
         fa-icon {
             color: rgba(0, 0, 0, 0.5);
-            font-size: 4em;
+            font-size: 2.5em;
             transition: 1s;
             margin: 5px;
         }
@@ -27,19 +27,22 @@
 }
 .presentation-container {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    top: 0; bottom: 0; right: 0; left: 0;
     margin: auto auto;
-
+    
     height: fit-content;
     width: fit-content;
-
+    
+    font-family: 'Vibur', Georgia;
     text-align: center;
     color: white;
 
-    h1 { font-size: 4em; }
+    opacity: 0;
+    transform: translateX(-200px);
+
+    h1 { 
+        font-size: 4em; 
+    }
     h2 { 
         font-size: 2.5em; 
         margin-top: -0.5em;
@@ -47,6 +50,45 @@
     h3 {
         margin-top: -1em;
     }
+}
+
+.scroll-down {
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    margin: auto auto 100px auto;
+
+    width: fit-content;
+    height: fit-content;
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+        color: #12E085;
+        
+        padding: 5px;
+        border-radius: 50%;
+        background-color: #111;
+        border: 2px solid #3B737A;
+
+        transform: scale(0.9);
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        color: white;
+        box-shadow:
+            0 0 3px 1.5px #fff, 
+            0 0 5px 3px #0ff; 
+    }
+}
+
+// Initial animation
+.animation {
+    opacity: 1;
+    transition: 1s ease-in-out all;
+    transform: translateX(0);
 }
 
 // Tablet
@@ -65,7 +107,7 @@
 // desktop
 @media screen and (min-width: 55em) {
     .presentation-container {
-        margin: 20vh auto auto 100px;
+        margin: 20vh auto auto auto;
 
         h1 { font-size: 6em; }
         h2 { font-size: 4.5em; }

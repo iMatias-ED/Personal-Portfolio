@@ -5,11 +5,13 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FooterComponent } from './components/footer/footer.component';
 import { FlippingTextCardComponent } from './components/flipping-text-card/flipping-text-card.component';
+import { NeonLightButtonComponent } from './components/neon-light-button/neon-light-button.component';
 
 @NgModule({
   declarations: [
     FlippingTextCardComponent,
     FooterComponent,
+    NeonLightButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { FlippingTextCardComponent } from './components/flipping-text-card/flipp
   exports: [
     FlippingTextCardComponent,
     FooterComponent,
+    NeonLightButtonComponent,
   ]
 })
 export class SharedModule {

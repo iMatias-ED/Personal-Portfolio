@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, AfterViewInit, Input } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
@@ -6,7 +6,8 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
   templateUrl: './fontawesome-animated-background.component.html',
   styleUrls: ['./fontawesome-animated-background.component.scss']
 })
-export class FontawesomeAnimatedBackgroundComponent implements OnInit {
+export class FontawesomeAnimatedBackgroundComponent implements AfterViewInit {
+  animate!: boolean;  
   @Input() iconRowsCount: number = 20;
 
   iconsList: IconProp[] = [
@@ -38,7 +39,8 @@ export class FontawesomeAnimatedBackgroundComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit() { 
+    setTimeout( () => this.animate = true, 200 )
   }
 
 }
