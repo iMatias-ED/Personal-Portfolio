@@ -4,12 +4,13 @@
 
     height: 100%;   
     width: 100%;
+    max-width: 100vw;
     background-color: #111;
+    overflow: hidden;
 
     .row {  
         z-index: -100;      
         display: flex;
-        overflow: hidden;
         justify-content: space-between;   
         fa-icon {
             color: rgba(0, 0, 0, 0.5);
@@ -20,7 +21,8 @@
     
         fa-icon:hover {
             transition: 0s;
-            color: rgb(7, 214, 241);
+            // color: rgb(7, 214, 241);
+            color: #12e08352;
         }
     }
 

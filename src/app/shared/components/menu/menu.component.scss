@@ -1,0 +1,70 @@
+.desktop-menu { display: none; }
+
+.mobile-menu, .desktop-menu {
+    height: 80px;
+    width: 100%;
+    padding: 15px 0px;
+
+    background-color: #111;
+}
+
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+        background-color: transparent;
+        margin-right: 25px;
+        font-size: 2em;
+
+        color: #12E085;
+        border: 2px solid #3B737A;
+    }
+}
+
+.mobile-menu-items {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: .7s;
+    transform: translateX(-100%);
+    
+    background-color: rgba(17, 17, 17, 0.973);
+    &.show {
+        transform: translateX(0);
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .buttons-container {
+        display: grid;
+        grid-gap: 50px;
+        font-size: 1.2em;
+        neon-light-button {
+            justify-self: center;
+        }
+    }
+
+}
+
+// Desktop
+@media screen and (min-width: 55em) {
+    .mobile-menu { display: none; }
+
+    .desktop-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        neon-light-button {
+            margin-right: 25px;
+        }
+    }
+}

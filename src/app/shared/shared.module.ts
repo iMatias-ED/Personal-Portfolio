@@ -6,11 +6,13 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FooterComponent } from './components/footer/footer.component';
 import { FlippingTextCardComponent } from './components/flipping-text-card/flipping-text-card.component';
 import { NeonLightButtonComponent } from './components/neon-light-button/neon-light-button.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     FlippingTextCardComponent,
     FooterComponent,
+    MenuComponent,
     NeonLightButtonComponent,
   ],
   imports: [
@@ -20,6 +22,7 @@ import { NeonLightButtonComponent } from './components/neon-light-button/neon-li
   exports: [
     FlippingTextCardComponent,
     FooterComponent,
+    MenuComponent,
     NeonLightButtonComponent,
   ]
 })
