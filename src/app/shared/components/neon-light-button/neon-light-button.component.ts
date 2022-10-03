@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'neon-light-button',
@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class NeonLightButtonComponent {
   @Input() label!: string;
-  @Input() href: string = "#";
+  @Input() redirectTo: string = "#";
+
 }

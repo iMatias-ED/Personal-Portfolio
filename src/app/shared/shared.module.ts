@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FlippingTextCardComponent } from './components/flipping-text-card/flipping-text-card.component';
 import { NeonLightButtonComponent } from './components/neon-light-button/neon-light-button.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ScrollTopComponent } from './components/scroll-button/scroll-button.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { MenuComponent } from './components/menu/menu.component';
     FooterComponent,
     MenuComponent,
     NeonLightButtonComponent,
+    ScrollTopComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import { MenuComponent } from './components/menu/menu.component';
     FooterComponent,
     MenuComponent,
     NeonLightButtonComponent,
+    ScrollTopComponent,
   ]
 })
 export class SharedModule {

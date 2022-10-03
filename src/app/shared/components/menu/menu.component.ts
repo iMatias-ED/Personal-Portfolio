@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Util } from 'src/app/util';
 
 interface menuItem {
   text: string;
@@ -27,6 +28,8 @@ export class MenuComponent implements OnInit {
 
   scrollTo( item: menuItem ) { 
     console.log("scrollingTo", item.scrollTo)
+    
+    Util.scrollIntoView( item.scrollTo! )
     this.showMenuItems = false;
   }
   
