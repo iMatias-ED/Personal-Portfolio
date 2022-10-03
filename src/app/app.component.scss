@@ -26,10 +26,10 @@
 
 // Responsive
 @media screen and (min-width: 40em) {
-    .content { margin: 10px 50px 30px 50px }
+    .content { padding: 10px 50px 30px 50px }
 }
 @media screen and (min-width: 55em) {
-    .content { margin: 10px 100px 50px 100px }
+    .content { padding: 10px 100px 50px 100px }
 }
 
 scroll-button {
