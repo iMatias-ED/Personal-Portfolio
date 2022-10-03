@@ -17,10 +17,12 @@
 
         h2 {
             font-size: 3.5em;
+            margin-top: -0.5em;
             color: #12E085
         }
         p {
             font-size: 1.2em;
+            margin-bottom: 50px;
         }
     }
 
@@ -42,6 +44,11 @@
     .tools-section {  
         grid-gap: 20px;  
         grid-template-columns: 1fr 1fr;
+
+        .text-container {
+            h2 { margin-top: auto; }
+            p { margin-bottom: auto; }
+        }
 
         span {
             font-size: 1.3em;

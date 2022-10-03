@@ -1,11 +1,12 @@
 .desktop-menu { display: none; }
 
-.mobile-menu, .desktop-menu {
-    height: 80px;
-    width: 100%;
-    padding: 15px 0px;
+.mobile-menu {
+    position: absolute;
+    right: 0px;
 
-    background-color: #111;
+    width: 50px;
+    margin: 30px;
+    z-index: 1000;
 }
 
 .mobile-menu {
@@ -15,7 +16,6 @@
 
     button {
         background-color: transparent;
-        margin-right: 25px;
         font-size: 2em;
 
         color: #12E085;
@@ -55,6 +55,15 @@
 }
 
 // Desktop
+
+.desktop-menu {
+    height: 80px;
+    width: 100%;
+    padding: 15px 0px;
+
+    background-color: #111;
+}
+
 @media screen and (min-width: 55em) {
     .mobile-menu { display: none; }
 

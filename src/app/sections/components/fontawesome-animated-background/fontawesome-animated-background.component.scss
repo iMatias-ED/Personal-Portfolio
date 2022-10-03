@@ -13,7 +13,7 @@
         display: flex;
         justify-content: space-between;   
         fa-icon {
-            color: rgba(0, 0, 0, 0.5);
+            color: #111;
             font-size: 2.5em;
             transition: 1s;
             margin: 5px;
@@ -30,7 +30,7 @@
 .presentation-container {
     position: absolute;
     top: 0; bottom: 0; right: 0; left: 0;
-    margin: auto auto;
+    margin: auto 10px auto 10px;
     
     height: fit-content;
     width: fit-content;
@@ -57,7 +57,7 @@
 .scroll-down {
     position: absolute;
     top: 0; bottom: 0; right: 0; left: 0;
-    margin: auto auto 20px 30px;
+    margin: auto auto 10px auto;
 
     width: fit-content;
     height: fit-content;
@@ -71,7 +71,12 @@
 }
 
 // Tablet
+@media screen and (min-width: 35em) {
+    .presentation-container { margin: auto auto 30px auto; }
+    .scroll-down { margin: auto auto 10px 30px; }
+}
 @media screen and (min-width: 40em) {
+    .scroll-down { margin: auto auto 10px auto; }
     .presentation-container {
         h1 { font-size: 4em; }
         h2 { 
