@@ -1,11 +1,14 @@
 <div class="projects-container">
     <div class="project-info hidden" *ngFor="let project of projectsInfo">
         <div class="project-description">
-            <h3>{{ project.title }}</h3>
+            <a class="title" (click)="redirect(project.redirectTo)"> 
+                {{ project.title }} 
+            </a>
             <p>{{ project.description }}</p>
         </div>
-        <div class="project-image">
-            <span class="image"><fa-icon [icon]="project.icon"></fa-icon></span>
-        </div>
+        <flipping-text-card (click)="redirect(project.redirectTo)"
+            cursor="pointer" 
+            [content]="project.cardContent">
+        </flipping-text-card>
     </div>
 </div>

@@ -8,19 +8,39 @@ import { FlippingTextCardContent } from 'src/app/shared/interfaces/flipping-text
 })
 export class ToolsSectionComponent implements OnInit {
 
-  exampleTool: FlippingTextCardContent = 
-    { frontText: "HTML", backText: "Professional" }
-  
-
   toolsList: FlippingTextCardContent[] = [
-    { frontText: "Angular",   backText: "Professional" },
-    { frontText: "Wordpress", backText: "Professional" },
-    { frontText: "TypeScript", backText: "Professional" },
-    { frontText: "Python", backText: "Advanced" },
-    { frontText: "Git", backText: "Professional" },
-    { frontText: "CSS/SASS", backText: "Professional" },
-    { frontText: "SQL", backText: "Medium" },
-    { frontText: "Django", backText: "Medium" },
+    { 
+      frontFace: { text: "Angular"},   
+      backFace: { title:"Experience Level", text:"Professional", textColor: "#12E085"} 
+    },
+    { 
+      frontFace: { text: "Wordpress"},   
+      backFace: { title:"Experience Level", text:"Professional", textColor: "#12E085"} 
+    },
+    { 
+      frontFace: { text: "TypeScript"},   
+      backFace: { title:"Experience Level", text:"Professional", textColor: "#12E085"} 
+    },
+    { 
+      frontFace: { text: "Python"},   
+      backFace: { title:"Experience Level", text:"Advanced", textColor: "#12E085"} 
+    },
+    { 
+      frontFace: { text: "Git"},   
+      backFace: { title:"Experience Level", text:"Professional", textColor: "#12E085"} 
+    },
+    { 
+      frontFace: { text: "CSS/SASS"},   
+      backFace: { title:"Experience Level", text:"Professional", textColor: "#12E085"} 
+    },
+    { 
+      frontFace: { text: "SQL"},   
+      backFace: { title:"Experience Level", text:"Medium", textColor: "#AD1F68"} 
+    },
+    { 
+      frontFace: { text: "Django"},   
+      backFace: { title:"Experience Level", text:"Medium", textColor: "#AD1F68"} 
+    },
   ]
 
   constructor() { }

@@ -7,7 +7,6 @@ import { FlippingTextCardContent } from '../../interfaces/flipping-text-card-con
   styleUrls: ['./flipping-text-card.component.scss']
 })
 export class FlippingTextCardComponent {
-
+  @Input() cursor!: string;
   @Input() content!: FlippingTextCardContent;
-
 }

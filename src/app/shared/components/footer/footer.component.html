@@ -1,9 +1,9 @@
 <div class="footer-container">
     <div class="icons-container">
-        <fa-icon [icon]="['fab', 'github']"></fa-icon>
-        <fa-icon [icon]="['fab', 'youtube']"></fa-icon>
-        <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
-        <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+        <button *ngFor="let socialNetwork of socialNetworks" (click)="redirect(socialNetwork.linkTo)"
+             >
+            <fa-icon [icon]="socialNetwork.icon"></fa-icon>
+        </button>
     </div>
     <div class="copyright">
         <h2>© Matias Acosta 2022</h2>

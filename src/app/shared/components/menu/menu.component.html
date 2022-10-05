@@ -14,8 +14,10 @@
 </div>
 
 <!-- Desktop -->
-<div class="desktop-menu">
-    <neon-light-button *ngFor="let item of menuItems"
-        (click)="scrollTo(item)" 
-        [label]="item.text"></neon-light-button>
+<div class="desktop-menu-container">
+    <div class="desktop-menu">
+        <neon-light-button *ngFor="let item of menuItems"
+            (click)="scrollTo(item)" 
+            [label]="item.text"></neon-light-button>
+    </div>
 </div>

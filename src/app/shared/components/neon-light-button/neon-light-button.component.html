@@ -1,1 +1,7 @@
-<a>{{ label }}</a>
+<a *ngIf="href; else asButton" [href]="href">
+    {{ label }}
+</a>
+
+<ng-template #asButton>
+    <a> {{ label }} </a>
+</ng-template>

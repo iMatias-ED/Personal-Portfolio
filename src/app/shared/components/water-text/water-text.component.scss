@@ -1,0 +1,28 @@
+span {
+    color: transparent;
+}
+:nth-child(1) {
+    position: relative;
+    -webkit-text-stroke: 1px #12E085;
+}
+:nth-child(2) {
+    position: absolute;
+    top: 0; left: 0;
+    animation: waterEffect 6s ease-in-out infinite;
+}
+
+
+@keyframes waterEffect {
+    0%,100% {
+        clip-path: polygon(0 45%, 16% 41%, 30% 47%, 43% 54%, 53% 58%, 64% 54%, 80% 51%, 90% 49%, 100% 49%, 100% 100%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 53%, 16% 59%, 31% 65%, 46% 63%, 58% 57%, 70% 50%, 81% 45%, 91% 41%, 100% 38%, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .container {
+        font-size: 3.5em !important; 
+    }
+}

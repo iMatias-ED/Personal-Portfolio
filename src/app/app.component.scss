@@ -5,6 +5,7 @@
 // #AD1F68
 
 .content { padding: 20px 20px }
+water-text { margin: 30px 0px }
 
 .first-section-background {
     height: 100vh;
@@ -13,13 +14,14 @@
     overflow: hidden;    
 }
 
-.section-title { 
-    text-align: center;
-    font-size: 3.5em;
-    color: #12E085;
+// Sections
+.projects-section, .contact-section {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
 }
 
-// Sections
 .projects-section {
     background-color: #1d1d1d;
 }

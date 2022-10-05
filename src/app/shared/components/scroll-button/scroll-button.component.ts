@@ -10,9 +10,6 @@ export class ScrollTopComponent {
   @Input() scrollIcon: "angle-up" | "angle-down" = "angle-up"
   @Input() scrollToId!: string;
 
-  scroll() {
-    console.log("scrollTop")
-    Util.scrollIntoView(this.scrollToId)
-  }
+  scroll() { Util.scrollIntoView(this.scrollToId) }
 
 }

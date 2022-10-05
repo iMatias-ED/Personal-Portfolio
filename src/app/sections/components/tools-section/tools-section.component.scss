@@ -11,14 +11,12 @@
         align-items: center;
         justify-content: flex-start;
 
-        p, h2 {
+        p {
             text-align: center;
         }
 
-        h2 {
-            font-size: 3.5em;
+        water-text {
             margin-top: -0.5em;
-            color: #12E085
         }
         p {
             font-size: 1.2em;
@@ -46,7 +44,7 @@
         grid-template-columns: 1fr 1fr;
 
         .text-container {
-            h2 { margin-top: auto; }
+            water-text { margin-top: auto; }
             p { margin-bottom: auto; }
         }
 

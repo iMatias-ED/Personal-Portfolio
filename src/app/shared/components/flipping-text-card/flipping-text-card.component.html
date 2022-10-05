@@ -1,12 +1,33 @@
-<div class="card">
+<button class="card"
+    [style.cursor] = "cursor"
+>
     <div class="front face"> 
-        {{ content.frontText }} </div>
-    <div class="back face"> 
-        <span class="title"> Experience Level </span>
-        <span class="content"
-            [style.color]="content.backText==='Medium'? '#AD1F68': '#12E085'"
-        > 
-            {{ content.backText }} 
+        <fa-icon *ngIf="content.frontFace.icon"
+            [icon]="content.frontFace.icon"
+            [style.color] = "content.frontFace.iconColor"
+            [style.font-size] = "content.frontFace.iconSize"
+        ></fa-icon>
+        <span *ngIf="content.frontFace.text">
+            {{ content.frontFace.text }} 
         </span>
     </div>
-</div>
+
+    <!-- Back Face -->
+
+    <!-- Custom background color -->
+    <div class="back face"
+        [style.background]=" content.backFace.bg "
+    > 
+        <span  class="title" *ngIf="content.backFace.title" 
+            [style.color] = "content.backFace.titleColor"
+            [style.font-size] = "content.backFace.titleSize"
+        > 
+            {{content.backFace.title}} 
+        </span>
+        
+        <span *ngIf="content.backFace.text" class="content" 
+        [style.color]="content.backFace.textColor"> 
+            {{ content.backFace.text }} 
+        </span>
+    </div>
+</button>

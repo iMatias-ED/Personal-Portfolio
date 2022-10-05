@@ -1,10 +1,12 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FlippingTextCardContent } from 'src/app/shared/interfaces/flipping-text-card-content';
+
 
 interface ProjectInfo {
-  icon: IconProp;
   title: string;
-  description: string;
+  redirectTo: string;
+  description: string;  
+  cardContent: FlippingTextCardContent
 }
 
 @Component({
@@ -17,15 +19,37 @@ export class ProjectsSectionComponent implements AfterViewInit {
   objects!: HTMLCollectionOf<Element>
 
   projectsInfo: ProjectInfo[] = [
-    { icon: ['fab', 'angular'], title: "Loan Calculator", 
-      description: "  Built in Angular, the loan calculator is part of a local cooperative's user-facing suite." },
-    { icon: ['fab', 'python'], title: "Gym Control Software", 
-      description: "  Built in Python, using PySide6 and SQLite3, this is a custom software created to administrate a small local gym business." },
-    { icon: ['fab', 'wordpress'], title: "\"El país que soñamos\"", 
-      description: "Built in wordpress for an ORG organization, this is a simple website where an annual magazine, created by the community, is published." },
-  ]
+    { 
+      title: "Loan Calculator", 
+      redirectTo: "https://calculadora.sancristobal.coop.py",
+      description: "Built in Angular, the loan calculator is part of a local cooperative's user-facing suite.",
+      cardContent: {
+        frontFace: {icon: ['fab', 'angular'], iconSize:'3em', iconColor: "#12E085"},
+        backFace: {title: "See Project", titleSize: "1.5em"}
+      } 
+    },
+    { 
+      title: "Gym Control Software",
+      redirectTo: "https://github.com/iMatias-ED/Sistema-Gym", 
+      description: "  Built in Python, using PySide6 and SQLite3, this is a custom software created to administrate a small local gym business.",
+      cardContent: {
+        frontFace: {icon: ['fab', 'python'], iconSize:'3em', iconColor: "#12E085"},
+        backFace: {title: "See Project", titleSize: "1.5em"}
+      } 
+    },
+    { 
+      title: "\"El país que soñamos\"",
+      redirectTo: "https://www.xn--elpasquesoamos-3lb4e.com/", 
+      description: "Built in wordpress for an ONG organization, this is a simple website where an annual magazine, created by the community, is published.",
+      cardContent: {
+        frontFace: { icon: ['fab', 'wordpress'], iconSize:'3em', iconColor: "#12E085"},
+        backFace: { title: "See Project", titleSize: "1.5em" } 
+    }
+  }]
 
   constructor() { }
+
+  redirect( url: string ) { window.open(url, '_blank') }
 
   ngAfterViewInit(): void {
     this.objects = document.getElementsByClassName("project-info")

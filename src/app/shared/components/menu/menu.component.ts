@@ -26,9 +26,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  scrollTo( item: menuItem ) { 
-    console.log("scrollingTo", item.scrollTo)
-    
+  scrollTo( item: menuItem ) {     
     Util.scrollIntoView( item.scrollTo! )
     this.showMenuItems = false;
   }
