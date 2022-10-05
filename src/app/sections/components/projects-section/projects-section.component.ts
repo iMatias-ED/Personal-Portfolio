@@ -25,7 +25,7 @@ export class ProjectsSectionComponent implements AfterViewInit {
       description: "Built in Angular, the loan calculator is part of a local cooperative's user-facing suite.",
       cardContent: {
         frontFace: {icon: ['fab', 'angular'], iconSize:'3em', iconColor: "#12E085"},
-        backFace: {title: "See Project", titleSize: "1.5em"}
+        backFace: {title: "See Project", titleSize: "1.5em", titleColor: "#AD1F68"}
       } 
     },
     { 
@@ -34,7 +34,7 @@ export class ProjectsSectionComponent implements AfterViewInit {
       description: "  Built in Python, using PySide6 and SQLite3, this is a custom software created to administrate a small local gym business.",
       cardContent: {
         frontFace: {icon: ['fab', 'python'], iconSize:'3em', iconColor: "#12E085"},
-        backFace: {title: "See Project", titleSize: "1.5em"}
+        backFace: {title: "See Project", titleSize: "1.5em", titleColor: "#AD1F68"}
       } 
     },
     { 
@@ -43,7 +43,7 @@ export class ProjectsSectionComponent implements AfterViewInit {
       description: "Built in wordpress for an ONG organization, this is a simple website where an annual magazine, created by the community, is published.",
       cardContent: {
         frontFace: { icon: ['fab', 'wordpress'], iconSize:'3em', iconColor: "#12E085"},
-        backFace: { title: "See Project", titleSize: "1.5em" } 
+        backFace: { title: "See Project", titleSize: "1.5em", titleColor: "#AD1F68"} 
     }
   }]
 

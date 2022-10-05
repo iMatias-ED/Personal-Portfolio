@@ -19,7 +19,7 @@
                 font-size: 1.2em;
                 color: transparent;
                 text-decoration: none;
-                -webkit-text-stroke: 1px #12E085;
+                -webkit-text-stroke: 1px #AD1F68;
             }
         }
 
@@ -49,6 +49,9 @@
 
             .project-description {
                 font-size: 1.2em;
+                .title {
+                    -webkit-text-stroke: 1px #12E085;
+                }
             }
 
             flipping-text-card {
@@ -58,12 +61,3 @@
         }
     }
 }
-// @media screen and (min-width: 55em) {
-//     .projects-container {
-//         .project-info {
-//             flipping-text-card {
-//                 font-size: 5.5em;
-//             }
-//         }
-//     }
-// }

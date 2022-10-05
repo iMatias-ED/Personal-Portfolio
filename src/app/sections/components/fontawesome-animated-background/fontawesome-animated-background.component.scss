@@ -15,14 +15,16 @@
         fa-icon {
             color: #111;
             font-size: 2.5em;
-            transition: 1s;
+            transition: 2s;
             margin: 5px;
         }
     
+        .hover {
+            color: #12e083d7;
+        }
         fa-icon:hover {
             transition: 0s;
-            // color: rgb(7, 214, 241);
-            color: #12e08352;
+            color: #12e083d7;
         }
     }
 

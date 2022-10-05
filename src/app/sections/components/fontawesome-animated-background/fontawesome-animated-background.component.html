@@ -1,6 +1,6 @@
-<div class="icons-container">
+<div class="icons-container" #iconsContainer>
     <div *ngFor="let row of rowCount" class="row">
-        <fa-icon *ngFor="let icon of iconsList" [icon]="icon"></fa-icon>
+        <fa-icon *ngFor="let icon of iconsList" [icon]="icon" class="test"></fa-icon>
     </div>
 </div>
 
