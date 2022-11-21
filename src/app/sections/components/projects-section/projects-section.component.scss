@@ -9,23 +9,26 @@
                 
         .project-description, flipping-text-card {
             transition: .7s ease-in-out all;
-        }
+        }   
 
         .project-description {
             text-align: center;
-            transform: translateX(150px);
+            transform: translateX(50%);
+
             .title {
                 cursor: pointer;
                 font-size: 1.2em;
                 color: transparent;
+                
                 text-decoration: none;
-                -webkit-text-stroke: 1px #AD1F68;
+                -webkit-text-stroke: 1px var(--highlight-color);
             }
         }
 
+        // Hide icon-card in mobile. Setup animation for desktop
         flipping-text-card {
             display: none;
-            transform: translateX(-150px);
+            transform: translateX(-50%);
         }
         opacity: 0;        
         transition: 1.3s ease-in-out all;
@@ -49,8 +52,12 @@
 
             .project-description {
                 font-size: 1.2em;
-                .title {
-                    -webkit-text-stroke: 1px #12E085;
+                .title { 
+                    transition: .3s;
+                    -webkit-text-stroke: 1px var(--primary-color); 
+                }
+                .title:hover { 
+                    -webkit-text-stroke-color: var(--highlight-color); 
                 }
             }
 

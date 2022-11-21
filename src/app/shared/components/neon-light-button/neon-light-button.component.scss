@@ -1,8 +1,11 @@
+a:before, a:after, a {
+    transition: .5s;
+}
+
 a {
-    color: #478892;
     padding: 15px;
     position: relative;
-    transition: 0.5s;
+    color: (var(--secondary-color));
     
     text-decoration: none;
     font-size: 1.1em;
@@ -10,12 +13,11 @@ a {
 
 a:before, a:after {
     content: '';
-    position: absolute;
-
     width: 10px;
     height: 10px;
-    transition: 0.5s;
+    position: absolute;
 }
+
 a:before {
     top: 0; left: 0;
     border-top: 2px solid white;
@@ -28,13 +30,12 @@ a:after {
 }
 
 a:hover {
-    color: white;
-    background-color: #111;
-    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--background-color);
 
     box-shadow:
         0 0 3px 1.5px #fff, 
-        0 0 5px 3px #0ff; 
+        0 0 5px 3px var(--neon-color); 
 }
 a:hover:before, a:hover:after {
     width: calc(100% - 2px);

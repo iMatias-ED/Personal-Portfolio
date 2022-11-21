@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface socialNetwork {
@@ -11,7 +11,7 @@ interface socialNetwork {
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
   socialNetworks: socialNetwork[] = [
     {icon: ['fab', 'github'], linkTo: "https://github.com/iMatias-ED"},
@@ -21,10 +21,5 @@ export class FooterComponent implements OnInit {
   ]
 
   redirect( url: string ) { location.href = url }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

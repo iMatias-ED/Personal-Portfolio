@@ -1,19 +1,17 @@
+// Icons Background
 .icons-container {
-    color: white;
     position: relative;
 
     height: 100%;   
     width: 100%;
-    max-width: 100vw;
-    background-color: #111;
     overflow: hidden;
+    background-color: var(--background-color);
 
     .row {  
-        // z-index: -100;      
         display: flex;
         justify-content: space-between;   
         fa-icon {
-            color: #111;
+            color: var(--background-color);
             font-size: 2.5em;
             transition: 2s;
             margin: 5px;
@@ -27,42 +25,29 @@
             color: #12e083d7;
         }
     }
-
 }
+
+// Presentation text
 .presentation-container {
     position: absolute;
     top: 0; bottom: 0; right: 0; left: 0;
-    margin: auto 10px auto 10px;
     
+    margin: auto;
     height: fit-content;
     width: fit-content;
-    
-    font-family: 'Vibur', Georgia;
+
     text-align: center;
-    color: white;
-
-    opacity: 0;
-    transform: translateX(-200px);
-
-    h1 { 
-        font-size: 4em; 
-    }
+    
+    h1 {  font-size: 4em; }
     h2 { 
         font-size: 2.5em; 
         margin-top: -0.5em;
     }
-    h3 {
-        margin-top: -1em;
-    }
-}
+    h3 { margin-top: -1em; }
 
-.scroll-down {
-    position: absolute;
-    top: 0; bottom: 0; right: 0; left: 0;
-    margin: auto auto 10px auto;
-
-    width: fit-content;
-    height: fit-content;
+    // Animation setup
+    opacity: 0;
+    transform: translateX(-200px);
 }
 
 // Initial animation
@@ -72,13 +57,20 @@
     transform: translateX(0);
 }
 
+.scroll-down {
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    margin: auto auto 20px auto; 
+
+    width: fit-content;
+    height: fit-content;
+}
+
 // Tablet
 @media screen and (min-width: 35em) {
-    .presentation-container { margin: auto auto 30px auto; }
-    .scroll-down { margin: auto auto 10px 30px; }
+    .scroll-down { margin: auto auto 20px 20px; }
 }
 @media screen and (min-width: 40em) {
-    .scroll-down { margin: auto auto 10px auto; }
     .presentation-container {
         h1 { font-size: 4em; }
         h2 { 
@@ -86,8 +78,10 @@
             margin-top: -0.5em;
         }
         h3 { margin-top: -1em; }
-        
     }
+}
+@media screen and (min-width: 560px) {
+    .presentation-container { margin: auto }
 }
 
 // desktop
@@ -98,6 +92,6 @@
         h1 { font-size: 6em; }
         h2 { font-size: 4.5em; }
         h3 { margin-top: -2em; }
-        
     }
+    .scroll-down { margin: auto auto 50px auto; }
 }

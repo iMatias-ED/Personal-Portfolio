@@ -8,14 +8,11 @@
     </div>
 
     <div class="tools-container">
-        <flipping-text-card 
-            *ngFor="let tool of toolsList"
+        <flipping-text-card *ngFor="let tool of toolsList"
             [content]="tool"
+            cursor="text"
         ></flipping-text-card>
     </div>
-    <span id="watermark">
-        Experience
-        <!-- About me -->
-    </span>
+    <span id="watermark"> Experience </span>
 </div>
 

@@ -1,15 +1,17 @@
-<div class="mobile-menu">
-    <button (click)="showMenu()">
-        <fa-icon icon="bars"></fa-icon>
+<div 
+    class="mobile-menu"
+    [class.active] = "showMenuItems">
+    <button (click)="toggleMenu()">
+        <fa-icon [icon]="menuIcon"></fa-icon>
     </button>
 </div>
 
 <div class="mobile-menu-items" [class.show]="showMenuItems" >
     <div class="buttons-container">
-
         <neon-light-button *ngFor="let item of menuItems"
-            (click)="scrollTo(item)" 
-            [label]="item.text"></neon-light-button>
+            (click)="scrollInMobile(item)" 
+            [label]="item.text">
+        </neon-light-button>
     </div>
 </div>
 
@@ -17,7 +19,7 @@
 <div class="desktop-menu-container">
     <div class="desktop-menu">
         <neon-light-button *ngFor="let item of menuItems"
-            (click)="scrollTo(item)" 
+            (click)="scrollInDesktop(item)" 
             [label]="item.text"></neon-light-button>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FlippingTextCardContent } from 'src/app/shared/interfaces/flipping-text-card-content';
 
 @Component({
@@ -6,7 +6,7 @@ import { FlippingTextCardContent } from 'src/app/shared/interfaces/flipping-text
   templateUrl: './tools-section.component.html',
   styleUrls: ['./tools-section.component.scss']
 })
-export class ToolsSectionComponent implements OnInit {
+export class ToolsSectionComponent {
 
   toolsList: FlippingTextCardContent[] = [
     { 
@@ -42,10 +42,5 @@ export class ToolsSectionComponent implements OnInit {
       backFace: { title:"Experience Level", text:"Medium", textColor: "#AD1F68"} 
     },
   ]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

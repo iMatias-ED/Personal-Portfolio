@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 
 // components
-import { FontawesomeAnimatedBackgroundComponent } from './components/fontawesome-animated-background/fontawesome-animated-background.component';
-import { ToolsSectionComponent } from './components/tools-section/tools-section.component';
-import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
+import { FontawesomeAnimatedBackgroundComponent } from './components/fontawesome-animated-background/fontawesome-animated-background.component';
+import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
+import { ToolsSectionComponent } from './components/tools-section/tools-section.component';
 
 // Icons 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
@@ -22,10 +22,10 @@ import {
 
 @NgModule({
   declarations: [
-    FontawesomeAnimatedBackgroundComponent,
     ContactSectionComponent,
-    ProjectsSectionComponent,
+    FontawesomeAnimatedBackgroundComponent,
     ToolsSectionComponent,
+    ProjectsSectionComponent,
   ],
   imports: [
     CommonModule,
@@ -33,12 +33,13 @@ import {
     SharedModule
   ],
   exports: [
-    FontawesomeAnimatedBackgroundComponent,
     ContactSectionComponent,
-    ProjectsSectionComponent,
+    FontawesomeAnimatedBackgroundComponent,
     ToolsSectionComponent,
+    ProjectsSectionComponent,
   ]
 })
+
 export class SectionsModule {
   constructor( fontawesome: FaIconLibrary ) {
     fontawesome.addIcons( faAngular, faWordpress, faPython );

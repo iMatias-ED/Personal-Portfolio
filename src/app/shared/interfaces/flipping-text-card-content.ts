@@ -14,7 +14,6 @@ interface FrontFaceContent {
 
 interface BackFaceContent {
     bg?: string;
-    // icon?: IconProp;
 
     text?: string;
     textSize?: string;

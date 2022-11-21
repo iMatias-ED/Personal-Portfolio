@@ -47,11 +47,8 @@ export class ProjectsSectionComponent implements AfterViewInit {
     }
   }]
 
-  constructor() { }
-
-  redirect( url: string ) { window.open(url, '_blank') }
-
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
+    // Animate on scroll
     this.objects = document.getElementsByClassName("project-info")
     this.observer = new IntersectionObserver( this.animaObjeto, { 
       root: null, rootMargin: "1000px 0px 200px 0px", threshold: 1.0 } )
@@ -65,6 +62,10 @@ export class ProjectsSectionComponent implements AfterViewInit {
       if ( entry.isIntersecting ) entry.target.classList.add("visible")
       else entry.target.classList.remove("visible")
     }
+  }
+
+  redirect( url: string ) { 
+    window.open(url, '_blank') 
   }
 
   range( value: number ) {

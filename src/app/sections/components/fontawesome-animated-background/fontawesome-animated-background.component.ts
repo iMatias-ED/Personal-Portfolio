@@ -10,8 +10,8 @@ export class FontawesomeAnimatedBackgroundComponent implements AfterViewInit {
   animate!: boolean;  
   @Input() iconRowsCount: number = 20;
   
-  private iconsRef!: HTMLCollectionOf<Element>;
   private simulateHover: boolean = true;
+  private iconsRef!: HTMLCollectionOf<Element>;
   @ViewChild('iconsContainer') iconsDiv!: ElementRef
 
   iconsList: IconProp[] = [
@@ -37,22 +37,21 @@ export class FontawesomeAnimatedBackgroundComponent implements AfterViewInit {
     "robot"
   ]
 
-  get rowCount() {
-    return Array.from( Array(this.iconRowsCount).keys() )
-  }
-
-  randomNumbersArray( max: number ) {
-    const n = Math.floor(Math.random() * 10);
-    return Array.from({length: n}, () => Math.floor( Math.random() * max ));
-  }
-
-  constructor() { }
-
   ngAfterViewInit() { 
-    // Main Title animation
+    // animations
+    this.setupHoverSimulation()
     setTimeout( () => this.animate = true, 200 )
 
-    // Simulate icons hover
+    // Deactivate hover simulation when mouse is in the div
+    // this.iconsDiv.nativeElement.onmouseenter = () => {
+    //   this.simulateHover = false;
+    // }
+    // this.iconsDiv.nativeElement.onmouseleave = () => {
+    //   this.simulateHover = true;
+    // }
+  }
+
+  private setupHoverSimulation() {
     this.iconsRef = document.getElementsByTagName('fa-icon')
 
     setTimeout( () => {
@@ -65,16 +64,15 @@ export class FontawesomeAnimatedBackgroundComponent implements AfterViewInit {
         }
       }, 700)
     }, 300)
+  }
 
-    // Deactivate hover simulation when mouse is in the div
-    console.dir(this.iconsDiv.nativeElement)
-    this.iconsDiv.nativeElement.onmouseenter = () => {
-      this.simulateHover = false;
-    }
-    this.iconsDiv.nativeElement.onmouseleave = () => {
-      this.simulateHover = true;
-    }
-    
+  private randomNumbersArray( max: number ) {
+    const n = Math.floor(Math.random() * 10);
+    return Array.from({length: n}, () => Math.floor( Math.random() * max ));
+  }
+
+  get rowCount() {
+    return Array.from( Array(this.iconRowsCount).keys() )
   }
 
 }

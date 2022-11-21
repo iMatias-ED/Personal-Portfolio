@@ -1,14 +1,16 @@
 <button class="card"
-    [style.cursor] = "cursor"
->
+    [style.cursor] = "cursor">
+
+    <!-- Front face -->
     <div class="front face"> 
-        <fa-icon *ngIf="content.frontFace.icon"
-            [icon]="content.frontFace.icon"
-            [style.color] = "content.frontFace.iconColor"
-            [style.font-size] = "content.frontFace.iconSize"
+        <fa-icon *ngIf="front.icon"
+            [icon]="front.icon"
+            [style.color] = "front.iconColor"
+            [style.font-size] = "front.iconSize"
         ></fa-icon>
-        <span *ngIf="content.frontFace.text">
-            {{ content.frontFace.text }} 
+
+        <span *ngIf="front.text">
+            {{ front.text }}    
         </span>
     </div>
 
@@ -16,18 +18,17 @@
 
     <!-- Custom background color -->
     <div class="back face"
-        [style.background]=" content.backFace.bg "
-    > 
-        <span  class="title" *ngIf="content.backFace.title" 
-            [style.color] = "content.backFace.titleColor"
-            [style.font-size] = "content.backFace.titleSize"
-        > 
-            {{content.backFace.title}} 
+        [style.background]=" back.bg">
+
+        <span  class="title" *ngIf="back.title" 
+            [style.color] = "back.titleColor"
+            [style.font-size] = "back.titleSize"> 
+            {{back.title}} 
         </span>
         
-        <span *ngIf="content.backFace.text" class="content" 
-        [style.color]="content.backFace.textColor"> 
-            {{ content.backFace.text }} 
+        <span *ngIf="back.text" class="content" 
+        [style.color]="back.textColor"> 
+            {{ back.text }} 
         </span>
     </div>
 </button>

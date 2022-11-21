@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { Util } from 'src/app/util';
 
 interface menuItem {
@@ -12,7 +13,8 @@ interface menuItem {
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
+  menuIcon: IconProp = "bars";
   showMenuItems: boolean = false;
 
   menuItems: menuItem[] = [
@@ -21,16 +23,18 @@ export class MenuComponent implements OnInit {
     { text: "Contact", scrollTo: "contact" },
   ]
 
-  constructor() { }
-
-  ngOnInit(): void {
+  scrollInDesktop ( item: menuItem ) {
+    Util.scrollIntoView( item.scrollTo! )
   }
 
-  scrollTo( item: menuItem ) {     
+  scrollInMobile( item: menuItem ) {     
+    this.toggleMenu()
     Util.scrollIntoView( item.scrollTo! )
-    this.showMenuItems = false;
   }
   
-  showMenu() { this.showMenuItems = true; }
+  toggleMenu() { 
+    this.showMenuItems = !this.showMenuItems;
+    this.menuIcon = this.showMenuItems? "arrow-left" : "bars"  
+  }
 
 }

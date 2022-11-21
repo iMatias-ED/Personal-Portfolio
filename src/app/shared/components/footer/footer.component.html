@@ -1,7 +1,7 @@
 <div class="footer-container">
     <div class="icons-container">
-        <button *ngFor="let socialNetwork of socialNetworks" (click)="redirect(socialNetwork.linkTo)"
-             >
+        <button *ngFor="let socialNetwork of socialNetworks" 
+            (click)="redirect(socialNetwork.linkTo)">
             <fa-icon [icon]="socialNetwork.icon"></fa-icon>
         </button>
     </div>

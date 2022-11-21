@@ -1,13 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #12E085;
+    --secondary-color: #3B737A;
+    --text-color: #fff;
+    --neon-color: #07D6F1;
+    --background-color: #111;
+    --highlight-color: #AD1F68;
+    --semi-transparent-color: rgba(17, 17, 17, 0.973);
+
+    --tablet-width: 35em;
+    --desktop-width: 50em;
+
+}
+
 body {
     margin: 0px;
     padding: 0px;
-    color: white;
-    background-color: #111;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
-// #07D6F1
-// #3B737A
-// #12E085
-// #E44B4D
-// #AD1F68
+button {
+    border: 0;
+    color: var(--text-color);
+    background: transparent;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+* {
+    font-family: 'Lora', 'Amiri' ,'Bell-MT';
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', 'Lora', Georgia;
+}
